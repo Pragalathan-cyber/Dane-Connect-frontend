@@ -1,0 +1,10 @@
+.input{
+   outline: none;
+}
+.input-post{
+   outline: none;
+
+}
+.input-post::placeholder{
+   color: rgb(128, 127, 128);
+}
