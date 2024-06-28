@@ -14,7 +14,7 @@ const Login = ({onLogin}) => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch('https://dane-connect-backend-klbokb7z5-pragalathan-cybers-projects.vercel.app/login', {
+      const response = await fetch('https://dane-connect-backend.vercel.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
