@@ -22,7 +22,7 @@ const Signup = ({ setLoggedIn }) => {
     }
     try {
       setLoading(true); // Start loading
-      const response = await fetch('http://localhost:7000/signup', {
+      const response = await fetch('https://dane-connect-backend-klbokb7z5-pragalathan-cybers-projects.vercel.app/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
