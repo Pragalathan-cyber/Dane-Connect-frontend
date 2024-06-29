@@ -150,7 +150,7 @@ const Posts = () => {
                 </div>
   
                 {post.imageUrl ? (
-                  <img className="lg:w-[600px]" src={`http://localhost:7000${post.imageUrl}`} alt="Post" />
+                  <img className="lg:w-[600px]" src={`https://dane-connect.vercel.app${post.imageUrl}`} alt="Post" />
                 ) : (
                   <p className="text-center text-gray-500">No image available</p>
                 )}
