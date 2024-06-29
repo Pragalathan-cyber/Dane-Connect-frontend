@@ -27,7 +27,7 @@ const Posts = () => {
       const reversedPosts = response.data.reverse(); // Reverse the order of posts
       setPosts(reversedPosts); // Set posts state
 
-      const likedPostsResponse = await axios.get('https://dane-connect.vercel.app/posts/liked', {
+      const likedPostsResponse = await axios.get('https://dane-test-backend.vercel.app/posts/liked', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -43,7 +43,7 @@ const Posts = () => {
   const handleLike = async (postId) => {
     try {
       const response = await axios.put(
-        `https://dane-connect.vercel.app/posts/${postId}/like`,
+        `https://dane-test-backend.vercel.app/posts/${postId}/like`,
         {},
         {
           headers: {
@@ -61,7 +61,7 @@ const Posts = () => {
 
   const handleDelete = async (postId, index) => {
     try {
-      const response = await axios.delete(`https://dane-connect.vercel.app/posts/${postId}`, {
+      const response = await axios.delete(`https://dane-test-backend.vercel.app/posts/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -93,7 +93,7 @@ const Posts = () => {
   const handleAddComment = async (postId) => {
     try {
       const response = await axios.post(
-        `https://dane-connect.vercel.app/posts/${postId}/comments`,
+        `https://dane-test-backend.vercel.app/posts/${postId}/comments`,
         { text: commentTexts[postId] },
         {
           headers: {
@@ -150,7 +150,7 @@ const Posts = () => {
                 </div>
   
                 {post.imageUrl ? (
-                  <img className="lg:w-[600px]" src={`https://dane-connect.vercel.app${post.imageUrl}`} alt="Post" />
+                  <img className="lg:w-[600px]" src={`https://dane-test-backend.vercel.app${post.imageUrl}`} alt="Post" />
                 ) : (
                   <p className="text-center text-gray-500">No image available</p>
                 )}
