@@ -19,7 +19,7 @@ const Posts = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get('https://dane-connect-backend-klbokb7z5-pragalathan-cybers-projects.vercel.app/posts', {
+      const response = await axios.get('https://dane-test-backend.vercel.app/posts', {
         headers: {
           Authorization: `Bearer ${token}`
         }
