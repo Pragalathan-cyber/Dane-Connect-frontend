@@ -20,7 +20,7 @@ const AddPosts = ({ token, onAdd }) => {
       formData.append('image', postImg);
       formData.append('content', postDesc);
 
-      const response = await axios.post('http://localhost:7000/posts', formData, {
+      const response = await axios.post('https://dane-test-backend.vercel.app/posts', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`
