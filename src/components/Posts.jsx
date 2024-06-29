@@ -27,7 +27,7 @@ const Posts = () => {
       const reversedPosts = response.data.reverse(); // Reverse the order of posts
       setPosts(reversedPosts); // Set posts state
 
-      const likedPostsResponse = await axios.get('http://localhost:7000/posts/liked', {
+      const likedPostsResponse = await axios.get('https://dane-connect.vercel.app/posts/liked', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -43,7 +43,7 @@ const Posts = () => {
   const handleLike = async (postId) => {
     try {
       const response = await axios.put(
-        `http://localhost:7000/posts/${postId}/like`,
+        `https://dane-connect.vercel.app/posts/${postId}/like`,
         {},
         {
           headers: {
@@ -61,7 +61,7 @@ const Posts = () => {
 
   const handleDelete = async (postId, index) => {
     try {
-      const response = await axios.delete(`http://localhost:7000/posts/${postId}`, {
+      const response = await axios.delete(`https://dane-connect.vercel.app/posts/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -93,7 +93,7 @@ const Posts = () => {
   const handleAddComment = async (postId) => {
     try {
       const response = await axios.post(
-        `http://localhost:7000/posts/${postId}/comments`,
+        `https://dane-connect.vercel.app/posts/${postId}/comments`,
         { text: commentTexts[postId] },
         {
           headers: {
