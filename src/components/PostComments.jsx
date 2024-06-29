@@ -10,7 +10,7 @@ const PostComments = ({ postId, commentsKey, username }) => {
 
   const fetchComments = async () => {
     try {
-      const response = await axios.get(`http://localhost:7000/posts/${postId}/comments`);
+      const response = await axios.get(`https://dane-test-backend.vercel.app/posts/${postId}/comments`);
       setComments(response.data); // Assuming response.data is an array of comments
     } catch (error) {
       console.error('Error fetching comments:', error);
