@@ -17,9 +17,7 @@ const AddPosts = ({ token, onAdd }) => {
     }
 
     try {
-      const formData = new FormData();
-      formData.append('image', postImg);  // Append image file
-      formData.append('content', postDesc);  // Append content text
+      // Append content text
 
       const response = await axios.post('https://dane-test-backend.vercel.app/posts',content {
         headers: {
