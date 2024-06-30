@@ -14,7 +14,7 @@ const Sidenav = () => {
     if (window.confirm('Are you sure you want to logout?')) {
       try {
         // Send a POST request to the server to logout
-        await axios.post('http://localhost:7000/logout');
+        await axios.post('https://dane-test-backend.vercel.app/logout');
   
         // Remove token from localStorage
         localStorage.removeItem('Danetoken');
